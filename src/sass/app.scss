@@ -1,0 +1,251 @@
+@import "variables";
+
+:root {
+  font-size: $font-size;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $light-grayish-blue;
+
+  main {
+    .icon-share {
+      display: block;
+      width: 15px;
+      mask: url("/images/icon-share.svg") no-repeat center / contain;
+      -webkit-mask: url("/images/icon-share.svg") no-repeat center / contain;
+      height: 100%;
+      margin: auto;
+    }
+    .card__button {
+      width: 32px;
+      height: 32px;
+      background-color: $light-grayish-blue;
+      border: none;
+      border-radius: 50%;
+
+      img {
+        width: 15px;
+
+      }
+    }
+
+    .text-bold {
+      font-weight: 700;
+      color: $very-dark-grayish-blue;
+    }
+
+    .text-thin {
+      font-weight: 500;
+      color: $grayish-blue;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 325px;
+      overflow: hidden;
+
+      .card__button {
+        cursor: pointer;
+      }
+
+      .card__image {
+        overflow: hidden;
+        height: 200px;
+
+        img {
+          width: 100%;
+          position: relative;
+          top: -1.5rem;
+        }
+
+      }
+
+      .card__body,
+      .card__footer,
+      .card__share {
+        padding: 1rem 2.6rem;
+      }
+
+      .card__body {
+        h1 {
+          font-size: 1.2rem;
+        }
+
+      }
+
+      .card__footer--spacing {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .card__footer {
+        //display: none;
+
+        .card__author {
+          margin-left: -3rem;
+
+          .card__author-name {
+            margin-bottom: 0.3rem;
+          }
+        }
+        img {
+          width: 40px;
+          border-radius: 50%;
+        }
+        .icon-share {
+          background-color: $very-dark-grayish-blue;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+
+      }
+
+      .card__share {
+        background-color: $very-dark-grayish-blue;
+        display: none;
+        flex-direction: row;
+
+        .card__socials {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 60%;
+        }
+
+        .card__button {
+          background-color: $desaturated-dark-blue;
+          cursor: pointer;
+
+          .icon-share {
+            background-color: $light-grayish-blue;
+          }
+
+
+        }
+
+        .text-thin {
+          letter-spacing: 0.3rem;
+          text-transform: uppercase;
+        }
+
+        &.active {
+          display: flex;
+        }
+      }
+
+
+      @media (min-width: $desktop) {
+        & {
+          flex-direction: row;
+          width: 730px;
+          height: 280px;
+          overflow: unset;
+
+          .card__image {
+            height: 100%;
+            width: 100%;
+            border-radius: 13px 0 0 13px;
+
+            img{
+              //height: 100%;
+              top: unset;
+              height: 100%;
+              width: unset;
+            }
+          }
+
+          .card__body {
+            h1 {
+              font-size: 1.6rem;
+            }
+          }
+
+          .card__footer {
+            .card__author {
+              margin-left: -10rem;
+            }
+
+            &.hidden {
+              display: flex;
+            }
+            .card__button {
+              position: relative;
+
+              & > .card__socials {
+                //position: relative;
+                //display: flex;
+                //flex-direction: row;
+                //width: fit-content;
+                //bottom: 150%;
+                //left: 50%;
+                width: 250px;
+                background-color: $very-dark-grayish-blue;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+                bottom: 120%;
+                right: -110px;
+                margin-left: -60px;
+                flex-direction: row;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                  width: unset;
+                  height: 20px;
+                  border-radius: unset;
+                }
+
+                &::after {
+                  content: " ";
+                  position: absolute;
+                  top: 100%; /* At the bottom of the tooltip */
+                  left: 50%;
+                  margin-left: -5px;
+                  border-width: 5px;
+                  border-style: solid;
+                  border-color: $very-dark-grayish-blue transparent transparent transparent;
+                }
+
+                .text-thin {
+                  padding-left: 2rem;
+                  letter-spacing: 0.3rem;
+                  text-transform: uppercase;
+                }
+
+                a:last-of-type{
+                  padding-right: 2rem;
+                }
+              }
+            }
+          }
+
+          .card__share {
+            display: none;
+
+          }
+        }
+      }
+    }
+
+
+  }
+}

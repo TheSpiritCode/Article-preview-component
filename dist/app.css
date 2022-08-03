@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap);
+:root {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: hsl(210deg, 46%, 95%);
+}
+body main .icon-share {
+  display: block;
+  width: 15px;
+  mask: url("/images/icon-share.svg") no-repeat center/contain;
+  -webkit-mask: url("/images/icon-share.svg") no-repeat center/contain;
+  height: 100%;
+  margin: auto;
+}
+body main .card__button {
+  width: 32px;
+  height: 32px;
+  background-color: hsl(210deg, 46%, 95%);
+  border: none;
+  border-radius: 50%;
+}
+body main .card__button img {
+  width: 15px;
+}
+body main .text-bold {
+  font-weight: 700;
+  color: hsl(217deg, 19%, 35%);
+}
+body main .text-thin {
+  font-weight: 500;
+  color: hsl(212deg, 23%, 69%);
+}
+body main .card {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 325px;
+  overflow: hidden;
+}
+body main .card .card__button {
+  cursor: pointer;
+}
+body main .card .card__image {
+  overflow: hidden;
+  height: 200px;
+}
+body main .card .card__image img {
+  width: 100%;
+  position: relative;
+  top: -1.5rem;
+}
+body main .card .card__body,
+body main .card .card__footer,
+body main .card .card__share {
+  padding: 1rem 2.6rem;
+}
+body main .card .card__body h1 {
+  font-size: 1.2rem;
+}
+body main .card .card__footer--spacing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .card .card__footer .card__author {
+  margin-left: -3rem;
+}
+body main .card .card__footer .card__author .card__author-name {
+  margin-bottom: 0.3rem;
+}
+body main .card .card__footer img {
+  width: 40px;
+  border-radius: 50%;
+}
+body main .card .card__footer .icon-share {
+  background-color: hsl(217deg, 19%, 35%);
+}
+body main .card .card__footer.hidden {
+  display: none;
+}
+body main .card .card__share {
+  background-color: hsl(217deg, 19%, 35%);
+  display: none;
+  flex-direction: row;
+}
+body main .card .card__share .card__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+body main .card .card__share .card__button {
+  background-color: hsl(214deg, 17%, 51%);
+  cursor: pointer;
+}
+body main .card .card__share .card__button .icon-share {
+  background-color: hsl(210deg, 46%, 95%);
+}
+body main .card .card__share .text-thin {
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+body main .card .card__share.active {
+  display: flex;
+}
+@media (min-width: 1440px) {
+  body main .card {
+    flex-direction: row;
+    width: 730px;
+    height: 280px;
+    overflow: unset;
+  }
+  body main .card .card__image {
+    height: 100%;
+    width: 100%;
+    border-radius: 13px 0 0 13px;
+  }
+  body main .card .card__image img {
+    top: unset;
+    height: 100%;
+    width: unset;
+  }
+  body main .card .card__body h1 {
+    font-size: 1.6rem;
+  }
+  body main .card .card__footer .card__author {
+    margin-left: -10rem;
+  }
+  body main .card .card__footer.hidden {
+    display: flex;
+  }
+  body main .card .card__footer .card__button {
+    position: relative;
+  }
+  body main .card .card__footer .card__button > .card__socials {
+    width: 250px;
+    background-color: hsl(217deg, 19%, 35%);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 120%;
+    right: -110px;
+    margin-left: -60px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body main .card .card__footer .card__button > .card__socials img {
+    width: unset;
+    height: 20px;
+    border-radius: unset;
+  }
+  body main .card .card__footer .card__button > .card__socials::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
+  }
+  body main .card .card__footer .card__button > .card__socials .text-thin {
+    padding-left: 2rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+  }
+  body main .card .card__footer .card__button > .card__socials a:last-of-type {
+    padding-right: 2rem;
+  }
+  body main .card .card__share {
+    display: none;
+  }
+}
