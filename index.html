@@ -7,6 +7,7 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="dist/app.css">
+    <script src="dist/index.js"></script>
 
     <title>Frontend Mentor | Article preview component</title>
 
@@ -24,7 +25,7 @@
 </head>
 <body>
 
-<main>
+<main id="card">
     <div class="card">
         <div class="card__image">
             <img src="images/drawers.jpg" alt="Article picture"/>
@@ -42,34 +43,17 @@
                 </p>
 
             </div>
-            <div class="card__footer--spacing card__footer">
-                <img src="images/avatar-michelle.jpg" alt="Michelle Appleton"/>
+            <div class="card__footer--spacing card__footer" id="card-footer">
                 <div class="card__author">
+                    <img src="images/avatar-michelle.jpg" alt="Michelle Appleton"/>
                     <div class="card__author-name text-bold">
                         Michelle Appleton
+                        <div class="card__date text-thin">
+                            28 Jun 2020
+                        </div>
                     </div>
-                    <div class="card__date text-thin">
-                        28 Jun 2020
-                    </div>
-                </div>
 
-                <div class="card__button">
-                    <span class="icon-share"></span>
-                    <div class="card__socials">
-                        <p class="text-thin">Share</p>
-                        <a href="#">
-                            <img src="images/icon-facebook.svg" alt="Facebook"/>
-                        </a>
-                        <a href="#">
-                            <img src="images/icon-twitter.svg" alt="Twitter"/>
-                        </a>
-                        <a href="#">
-                            <img src="images/icon-pinterest.svg" alt="Pinterest"/>
-                        </a>
-                    </div>
                 </div>
-            </div>
-            <div class="card__footer--spacing card__share">
                 <div class="card__socials">
                     <p class="text-thin">Share</p>
                     <a href="#">
@@ -82,17 +66,20 @@
                         <img src="images/icon-pinterest.svg" alt="Pinterest"/>
                     </a>
                 </div>
-                <button class="card__button">
+                <div class="card__button">
                     <span class="icon-share"></span>
+                </div>
 
-                </button>
             </div>
+
         </div>
     </div>
+
 </main>
 <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
 </footer>
+
 </body>
 </html>

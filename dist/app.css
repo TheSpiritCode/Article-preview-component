@@ -45,6 +45,7 @@ body main .card {
   flex-direction: column;
   width: 325px;
   overflow: hidden;
+  box-shadow: 0 1rem 5rem -2rem hsl(212deg, 23%, 69%);
 }
 body main .card .card__button {
   cursor: pointer;
@@ -73,10 +74,12 @@ body main .card .card__footer--spacing {
   align-items: center;
 }
 body main .card .card__footer .card__author {
-  margin-left: -3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 body main .card .card__footer .card__author .card__author-name {
-  margin-bottom: 0.3rem;
+  margin-left: 1rem;
 }
 body main .card .card__footer img {
   width: 40px;
@@ -85,8 +88,38 @@ body main .card .card__footer img {
 body main .card .card__footer .icon-share {
   background-color: hsl(217deg, 19%, 35%);
 }
-body main .card .card__footer.hidden {
+body main .card .card__footer .card__socials {
   display: none;
+}
+body main .card .card__footer.sharing {
+  background-color: hsl(217deg, 19%, 35%);
+}
+body main .card .card__footer.sharing .card__author {
+  display: none;
+}
+body main .card .card__footer.sharing .card__socials {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+body main .card .card__footer.sharing .card__socials .text-thin {
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  margin-right: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body main .card .card__footer.sharing .card__socials img {
+  width: 20px;
+  border-radius: 0;
+  margin: 0.5rem;
+}
+body main .card .card__footer.sharing .card__button {
+  background-color: hsl(214deg, 17%, 51%);
+}
+body main .card .card__footer.sharing .card__button .icon-share {
+  background-color: hsl(210deg, 46%, 95%);
 }
 body main .card .card__share {
   background-color: hsl(217deg, 19%, 35%);
@@ -124,7 +157,7 @@ body main .card .card__share.active {
   body main .card .card__image {
     height: 100%;
     width: 100%;
-    border-radius: 13px 0 0 13px;
+    border-radius: 10px 0 0 10px;
   }
   body main .card .card__image img {
     top: unset;
@@ -134,55 +167,43 @@ body main .card .card__share.active {
   body main .card .card__body h1 {
     font-size: 1.6rem;
   }
-  body main .card .card__footer .card__author {
-    margin-left: -10rem;
+  body main .card .card__footer {
+    background-color: unset;
   }
-  body main .card .card__footer.hidden {
+  body main .card .card__footer.sharing {
+    background-color: unset;
+  }
+  body main .card .card__footer.sharing .card__author {
     display: flex;
   }
-  body main .card .card__footer .card__button {
-    position: relative;
-  }
-  body main .card .card__footer .card__button > .card__socials {
-    width: 250px;
+  body main .card .card__footer.sharing .card__socials {
+    padding: 0.5rem 2rem;
     background-color: hsl(217deg, 19%, 35%);
     color: #fff;
     text-align: center;
     border-radius: 6px;
     position: absolute;
     z-index: 1;
-    bottom: 120%;
-    right: -110px;
-    margin-left: -60px;
+    bottom: 42%;
+    right: 20%;
     flex-direction: row;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    box-shadow: 0 0.3rem 1rem hsl(212deg, 23%, 69%);
   }
-  body main .card .card__footer .card__button > .card__socials img {
-    width: unset;
-    height: 20px;
+  body main .card .card__footer.sharing .card__socials img {
+    width: 20px;
     border-radius: unset;
   }
-  body main .card .card__footer .card__button > .card__socials::after {
+  body main .card .card__footer.sharing .card__socials::after {
     content: " ";
     position: absolute;
     top: 100%; /* At the bottom of the tooltip */
     left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
+    margin-left: -10px;
+    border-width: 10px;
     border-style: solid;
     border-color: hsl(217deg, 19%, 35%) transparent transparent transparent;
-  }
-  body main .card .card__footer .card__button > .card__socials .text-thin {
-    padding-left: 2rem;
-    letter-spacing: 0.3rem;
-    text-transform: uppercase;
-  }
-  body main .card .card__footer .card__button > .card__socials a:last-of-type {
-    padding-right: 2rem;
-  }
-  body main .card .card__share {
-    display: none;
   }
 }

@@ -22,6 +22,7 @@ body {
       height: 100%;
       margin: auto;
     }
+
     .card__button {
       width: 32px;
       height: 32px;
@@ -52,6 +53,7 @@ body {
       flex-direction: column;
       width: 325px;
       overflow: hidden;
+      box-shadow: 0 1rem 5rem -2rem $grayish-blue;
 
       .card__button {
         cursor: pointer;
@@ -90,25 +92,65 @@ body {
       }
 
       .card__footer {
-        //display: none;
 
         .card__author {
-          margin-left: -3rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
 
           .card__author-name {
-            margin-bottom: 0.3rem;
+            margin-left: 1rem;
           }
         }
+
         img {
           width: 40px;
           border-radius: 50%;
         }
+
         .icon-share {
           background-color: $very-dark-grayish-blue;
         }
 
-        &.hidden {
+        .card__socials {
           display: none;
+        }
+
+        &.sharing {
+          background-color: $very-dark-grayish-blue;
+
+          .card__author {
+            display: none;
+          }
+
+          .card__socials {
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .text-thin {
+              letter-spacing: 0.4rem;
+              text-transform: uppercase;
+              margin-right: 1rem;
+              margin-top: 0;
+              margin-bottom: 0;
+            }
+
+            img {
+              width: 20px;
+              border-radius: 0;
+              margin: 0.5rem;
+            }
+          }
+
+          .card__button {
+            background-color: $desaturated-dark-blue;
+
+            .icon-share {
+              background-color: $light-grayish-blue;
+            }
+          }
         }
 
 
@@ -159,9 +201,9 @@ body {
           .card__image {
             height: 100%;
             width: 100%;
-            border-radius: 13px 0 0 13px;
+            border-radius: 10px 0 0 10px;
 
-            img{
+            img {
               //height: 100%;
               top: unset;
               height: 100%;
@@ -176,41 +218,33 @@ body {
           }
 
           .card__footer {
-            .card__author {
-              margin-left: -10rem;
-            }
+            background-color: unset;
 
-            &.hidden {
-              display: flex;
-            }
-            .card__button {
-              position: relative;
+            &.sharing {
+              background-color: unset;
 
-              & > .card__socials {
-                //position: relative;
-                //display: flex;
-                //flex-direction: row;
-                //width: fit-content;
-                //bottom: 150%;
-                //left: 50%;
-                width: 250px;
+              .card__author {
+                display: flex;
+              }
+
+              .card__socials {
+                padding: 0.5rem 2rem;
                 background-color: $very-dark-grayish-blue;
                 color: #fff;
                 text-align: center;
                 border-radius: 6px;
                 position: absolute;
                 z-index: 1;
-                bottom: 120%;
-                right: -110px;
-                margin-left: -60px;
+                bottom: 42%;
+                right: 20%;
                 flex-direction: row;
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
+                box-shadow: 0 0.3rem 1rem $grayish-blue ;
 
                 img {
-                  width: unset;
-                  height: 20px;
+                  width: 20px;
                   border-radius: unset;
                 }
 
@@ -219,29 +253,16 @@ body {
                   position: absolute;
                   top: 100%; /* At the bottom of the tooltip */
                   left: 50%;
-                  margin-left: -5px;
-                  border-width: 5px;
+                  margin-left: -10px;
+                  border-width: 10px;
                   border-style: solid;
                   border-color: $very-dark-grayish-blue transparent transparent transparent;
                 }
-
-                .text-thin {
-                  padding-left: 2rem;
-                  letter-spacing: 0.3rem;
-                  text-transform: uppercase;
-                }
-
-                a:last-of-type{
-                  padding-right: 2rem;
-                }
               }
+
             }
           }
 
-          .card__share {
-            display: none;
-
-          }
         }
       }
     }
