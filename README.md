@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/css-article-preview-with-share-tooltip-and-footer-in-one-element-Zq7GRnfaAL](https://www.frontendmentor.io/solutions/css-article-preview-with-share-tooltip-and-footer-in-one-element-Zq7GRnfaAL)
 - Live Site URL: [https://thespiritcode.github.io/Article-preview-component/](https://thespiritcode.github.io/Article-preview-component/)
 
 ## My process
