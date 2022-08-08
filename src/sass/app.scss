@@ -17,8 +17,8 @@ body {
     .icon-share {
       display: block;
       width: 15px;
-      mask: url("/images/icon-share.svg") no-repeat center / contain;
-      -webkit-mask: url("/images/icon-share.svg") no-repeat center / contain;
+      mask: url("../images/icon-share.svg") no-repeat center / contain;
+      -webkit-mask: url("../images/icon-share.svg") no-repeat center / contain;
       height: 100%;
       margin: auto;
     }
@@ -219,6 +219,7 @@ body {
 
           .card__footer {
             background-color: unset;
+            position: relative;
 
             &.sharing {
               background-color: unset;
@@ -235,10 +236,10 @@ body {
                 border-radius: 6px;
                 position: absolute;
                 z-index: 1;
-                bottom: 42%;
-                right: 20%;
+                bottom: 100%;
+                right: -15%;
                 flex-direction: row;
-                display: flex;
+                display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 box-shadow: 0 0.3rem 1rem $grayish-blue ;
